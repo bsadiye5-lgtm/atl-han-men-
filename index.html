@@ -70,17 +70,17 @@
     .btn {
       display: inline-block;
       margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #7f56da;
+      background: #7f56da;
       color: white;
-      text-decoration: none;
+      padding: 10px 20px;
       border-radius: 6px;
+      text-decoration: none;
       font-weight: 500;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #643ebc;
+      background: #6c3fd3;
     }
 
     footer {
@@ -106,7 +106,7 @@
 
   <header>
     <h1>Tasarımkod</h1>
-    <p>dijital tasarım çözümleri • qr menü • logo • marka kimliği</p>
+    <p>Dijital tasarım çözümleri • QR Menü • Logo • Marka Kimliği</p>
   </header>
 
   <section id="about">
@@ -122,29 +122,37 @@
       <div class="service">
         <h3>📱 QR Menü</h3>
         <p>Modern ve kolay yönetilebilir dijital menü sistemleri.</p>
-        <a href="https://www.instagram.com/direct/t/yourusername" target="_blank" class="btn">İletişime Geç</a>
+        <a href="#" class="btn" onclick="openInstagram()">İletişime Geç</a>
       </div>
       <div class="service">
         <h3>🎨 Logo Tasarımı</h3>
         <p>Markanı temsil eden sade, akılda kalıcı logolar.</p>
-        <a href="https://www.instagram.com/direct/t/yourusername" target="_blank" class="btn">İletişime Geç</a>
+        <a href="#" class="btn" onclick="openInstagram()">İletişime Geç</a>
       </div>
       <div class="service">
         <h3>🪄 Marka Kimliği</h3>
         <p>Renk, font ve tarz bütünlüğüyle markanı dijitalde öne çıkar.</p>
-        <a href="https://www.instagram.com/direct/t/yourusername" target="_blank" class="btn">İletişime Geç</a>
+        <a href="#" class="btn" onclick="openInstagram()">İletişime Geç</a>
       </div>
     </div>
   </section>
-
-  <a href="https://www.instagram.com/tasarimkod/?ref=dm" target="_blank" class="btn">İletişime Geç</a>
-
 
   <footer>
     <p>📩 <a href="mailto:tasarimkod@gmail.com">tasarimkod@gmail.com</a>  
     • <a href="https://www.instagram.com/tasarimkod" target="_blank">@tasarimkod</a></p>
   </footer>
 
+  <script>
+    function openInstagram() {
+      const user = "tasarimkod";
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = `instagram://user?username=${user}`;
+      } else {
+        window.open(`https://www.instagram.com/${user}`, "_blank");
+      }
+    }
+  </script>
+
 </body>
 </html>
-
